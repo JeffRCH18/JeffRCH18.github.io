@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.book {
+  width: 200px;
+  height: 300px;
+  perspective: 1200px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cover, .page-left, .page-right {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.22, 0.67, 0.55, 0.97);
+}
+
+.cover {
+  background-color: #ffcc80;
+  transform-origin: left;
+  transform: rotateY(0deg);
+}
+
+.page-left {
+  background-color: #f8bbd0;
+  transform-origin: right;
+  transform: rotateY(-90deg);
+}
+
+.page-right {
+  background-color: #c8e6c9;
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+
+.opened .cover {
+  transform: rotateY(-90deg);
+}
+
+.opened .page-left {
+  transform: rotateY(-180deg);
+}
+
+.opened .page-right {
+  transform: rotateY(0deg);
+}
