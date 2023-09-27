@@ -14,9 +14,9 @@ body {
   position: relative;
 }
 
-.cover, .page-left, .page-right {
+.cover, .left-page, .right-page {
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: 100%;
   backface-visibility: hidden;
   transition: transform 0.6s cubic-bezier(0.22, 0.67, 0.55, 0.97);
@@ -28,13 +28,13 @@ body {
   transform: rotateY(0deg);
 }
 
-.page-left {
+.left-page {
   background-color: #f8bbd0;
   transform-origin: right;
   transform: rotateY(-90deg);
 }
 
-.page-right {
+.right-page {
   background-color: #c8e6c9;
   transform-origin: left;
   transform: rotateY(90deg);
@@ -44,10 +44,10 @@ body {
   transform: rotateY(-90deg);
 }
 
-.opened .page-left {
+.opened .left-page {
   transform: rotateY(-180deg);
 }
 
-.opened .page-right {
+.opened .right-page {
   transform: rotateY(0deg);
 }
