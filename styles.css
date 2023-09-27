@@ -4,11 +4,13 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .book {
-  width: 200px;
-  height: 300px;
+  width: 80%; /* Utilizamos porcentaje para adaptarlo al tamaño de la pantalla */
+  max-width: 300px; /* Establecemos un ancho máximo para mantener la legibilidad */
+  height: 60vh; /* Porcentaje para la altura */
   perspective: 1200px;
   cursor: pointer;
   position: relative;
@@ -16,26 +18,26 @@ body {
 
 .cover, .left-page, .right-page {
   position: absolute;
-  width: 50%;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
   height: 100%;
   backface-visibility: hidden;
   transition: transform 0.6s cubic-bezier(0.22, 0.67, 0.55, 0.97);
 }
 
 .cover {
-  background-color: #ffcc80;
+  background-color: black;
   transform-origin: left;
   transform: rotateY(0deg);
 }
 
 .left-page {
-  background-color: #f8bbd0;
+  background-color: red;
   transform-origin: right;
   transform: rotateY(-90deg);
 }
 
 .right-page {
-  background-color: #c8e6c9;
+  background-color: blue;
   transform-origin: left;
   transform: rotateY(90deg);
 }
@@ -50,4 +52,11 @@ body {
 
 .opened .right-page {
   transform: rotateY(0deg);
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+  .book {
+    width: 90%; /* Cambiamos el ancho para dispositivos más pequeños */
+  }
 }
