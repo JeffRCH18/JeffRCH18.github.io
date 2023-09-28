@@ -176,7 +176,7 @@ p {
 /* Media queries para hacer el diseño responsive */
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 
     
     .ssaludo {
@@ -187,6 +187,11 @@ p {
         width: fit-content;
         border: none;
         margin-left: -500px;
+        white-space: nowrap;
+        width: 12ch;
+        border-right: 4px solid transparent; /* Hacer el cursor transparente */
+        animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+        overflow: hidden;
     
     }
 
