@@ -176,23 +176,17 @@ p {
 /* Media queries para hacer el diseño responsive */
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
     
     .ssaludo {
         padding: 20px;
-        color: aliceblue;
         display: block;
         margin: 0 auto;
         text-align: center;
         width: fit-content;
         border: none;
         margin-left: -500px;
-        white-space: nowrap;
-        width: 12ch;
-        border-right: 4px solid transparent; /* Hacer el cursor transparente */
-        animation: typing 2s steps(12), blink .5s infinite step-end alternate;
-        overflow: hidden;
     
     }
 
@@ -253,7 +247,7 @@ p {
 
     .decoracion-al-final {
         margin-top: 10px;
-        font-size: 9px;
+        font-size: 13px;
         text-align: justify;
         border-bottom: 1px solid #874421; /* Línea inferior */
         padding-bottom: -22px;
@@ -273,48 +267,22 @@ p {
     border-right: 4px solid transparent; /* Hacer el cursor transparente */
     animation: typing 2s steps(12), blink .5s infinite step-end alternate;
     overflow: hidden;
-}
+}}
 
-.container, .book-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.book-content {
-    width: 65%;
-    min-width: 250px;
-    max-width: 400px;
-    height: 330px;
-    position: relative;
-    perspective: 1000px;
-    transition: 1s;
-}
-
-.book {
-    position: absolute;
-    width: 65%;
-    height: 100%;
-    transition: 1s;
-    transform-style: preserve-3d;
-    transform-origin: left;
-}
-
-
-
-
-
-
-
-
-
-
-
-
+.ssaludo {
+    color: aliceblue;
+    display: block;
+    font-size: 28px;
+    font-style: oblique;
+    text-decoration: none;
+    padding-left: 620px;
+    padding-top: 20px;
+    text-align: center;
+    white-space: nowrap;
+    width: 12ch;
+    border-right: 4px solid transparent; /* Hacer el cursor transparente */
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow: hidden;
 
 }
 @keyframes typing {
