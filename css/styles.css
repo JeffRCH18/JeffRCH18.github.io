@@ -267,17 +267,6 @@ p {
         white-space: nowrap; /* Evitar que se rompa en múltiples líneas */
     }
 
-    .ssaludo::after {
-        /* Agregar cursor */
-        content: '';
-        display: inline-block;
-        width: 0.1em;
-        height: 1.1em;
-        background: white;
-        position: absolute;
-        animation: blink 1s infinite step-end alternate;
-    }
-
     @keyframes typing {
         from { width: 0; }
         to { width: 12ch; } /* Ancho del texto "Buenos días" */
