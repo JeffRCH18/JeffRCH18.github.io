@@ -1,62 +1,85 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+p{
+	margin-top: 10px;
+	font-size: 13px;
+	text-align: justify;
+}
+.container, .book-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	width: 100%;
+	height: 100vh;
+	background: #2d6f75;
+}
+.book-content{
+	width: 65%;
+	min-width: 250px;
+	max-width: 400px;
+	height: 330px;
+	position: relative;
+	perspective: 1000px;
+	transition: 1s;
+}
+.book{
+	position: absolute;
+	width: 65%;
+	height: 100%;
+	transition: 1s;
+	transform-style: preserve-3d;
+	transform-origin: left; 
+}
+.face-front, .face-back{
+	width: 100%;
+	height: 100%;
+	background: white;
+	padding: 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.face-front{
+	box-shadow: inset 3px 0px 20px -7px black;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.face-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateZ(-1px) rotateY(180deg);
+	box-shadow: inset -3px 1px 20px -7px black;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+#portada{
+	background: url('../img/bookPortada.jpg');
+}
+#portada-back{
+	background: url('../img/portadaBack.jpg');
+}
+#portada, #portada-back{
+	background-size: 100% 100%;
 }
 
-.book {
-  width: 80%; /* Utilizamos porcentaje para adaptarlo al tamaño de la pantalla */
-  max-width: 300px; /* Establecemos un ancho máximo para mantener la legibilidad */
-  height: 60vh; /* Porcentaje para la altura */
-  perspective: 1200px;
-  cursor: pointer;
-  position: relative;
+/* Clases que se agregaran con Javascript */
+
+.trnsf{
+	transform: translateX(80px);
+}
+.trnsf-reset{
+	transform: translateX(0px);
 }
 
-.cover, .left-page, .right-page {
-  position: absolute;
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 100%;
-  backface-visibility: hidden;
-  transition: transform 0.6s cubic-bezier(0.22, 0.67, 0.55, 0.97);
-}
+/* @media para hacer el texto responsivo */
 
-.cover {
-  background-color: black;
-  transform-origin: left;
-  transform: rotateY(0deg);
-}
-
-.left-page {
-  background-color: red;
-  transform-origin: right;
-  transform: rotateY(-90deg);
-}
-
-.right-page {
-  background-color: blue;
-  transform-origin: left;
-  transform: rotateY(90deg);
-}
-
-.opened .cover {
-  transform: rotateY(-90deg);
-}
-
-.opened .left-page {
-  transform: rotateY(-180deg);
-}
-
-.opened .right-page {
-  transform: rotateY(0deg);
-}
-
-/* Media query para dispositivos móviles */
-@media (max-width: 767px) {
-  .book {
-    width: 90%; /* Cambiamos el ancho para dispositivos más pequeños */
-  }
+@media screen and (max-width: 800px){
+	p{
+		font-size: 12px;
+	}
 }
