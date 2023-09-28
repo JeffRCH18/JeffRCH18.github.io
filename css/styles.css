@@ -195,11 +195,12 @@ p {
         background-repeat: no-repeat;
         background-size: cover;
     }
-
     .saludo-container {
         text-align: center;
-        padding: 20px; 
+        padding: 20px;
     }
+
+
     p {
         font-size: 12px;
     }   
@@ -254,36 +255,66 @@ p {
 
     .ssaludo {
         color: aliceblue;
-        display: block;
+        display: inline-block;
         font-size: 28px;
         font-style: oblique;
         text-decoration: none;
-        padding-left: 10%; /* Ajusta este valor según sea necesario */
-        padding-top: 2%; /* Ajusta este valor según sea necesario */
-        text-align: center;
-        white-space: nowrap;
-        width: 80%; /* Ajusta este valor según sea necesario */
+        text-align: center; /* Alinea el texto al centro */
+        width: 100%; /* Ajusta el ancho según sea necesario */
         border-right: 4px solid transparent; /* Hacer el cursor transparente */
         animation: typing 2s steps(12), blink .5s infinite step-end alternate;
         overflow: hidden;
+        white-space: nowrap; /* Evitar que se rompa en múltiples líneas */
+    }
+
+    .ssaludo::after {
+        /* Agregar cursor */
+        content: '';
+        display: inline-block;
+        width: 0.1em;
+        height: 1.1em;
+        background: white;
+        position: absolute;
+        animation: blink 1s infinite step-end alternate;
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 12ch; } /* Ancho del texto "Buenos días" */
+    }
+
+    /* Estilo para el efecto de parpadeo del cursor */
+    @keyframes blink {
+        50% { border-color: transparent; }
     }
     
 }
-    .ssaludo {
-        color: aliceblue;
-        display: block;
-        font-size: 28px;
-        font-style: oblique;
-        text-decoration: none;
-        padding-left: 10%; /* Ajusta este valor según sea necesario */
-        padding-top: 2%; /* Ajusta este valor según sea necesario */
-        text-align: center;
-        white-space: nowrap;
-        width: 80%; /* Ajusta este valor según sea necesario */
-        border-right: 4px solid transparent; /* Hacer el cursor transparente */
-        animation: typing 2s steps(12), blink .5s infinite step-end alternate;
-        overflow: hidden;
-    }
+
+
+.ssaludo {
+    padding: 20px;
+    display: block;
+    margin: 0 auto; /* Esto centra el elemento horizontalmente */
+    text-align: center;
+    width: fit-content; /* Se ajusta al contenido */
+    border: none;
+}
+
+
+.ssaludo {
+    color: aliceblue;
+    display: block;
+    font-size: 28px;
+    justify-content: center;
+    padding-left: -300px;
+    font-style: oblique;
+    text-decoration: none;
+    width: 12ch; /* Ajusta el ancho según sea necesario */
+    border-right: 4px solid transparent; /* Hacer el cursor transparente */
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow: hidden;
+    white-space: nowrap; /* Evitar que se rompa en múltiples líneas */
+}
 
 
 
