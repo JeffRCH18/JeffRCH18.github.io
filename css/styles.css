@@ -50,7 +50,7 @@ p {
 .face-front, .face-back {
     width: 100%;
     height: 100%;
-    background: #E1E1D0;
+    background: #E1E1D7;
     padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
@@ -179,8 +179,19 @@ p {
     p {
         font-size: 12px;
     }
+
     .rectangulo p {
         font-size: 80%;
         margin-bottom: 20px;
+    }
+
+    .img-cafe, .img-estre {
+        width: 50%;
+        margin-left: 20px;
+        margin-top: -80px;
+    }
+
+    .face-front, .face-back {
+        padding: 10px;
     }
 }
