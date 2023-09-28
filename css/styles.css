@@ -1,12 +1,13 @@
-*{
-	padding: 0;
-	margin: 0;
-	font-family: sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
 }
-p{
-	margin-top: 10px;
-	font-size: 13px;
-	text-align: justify;
+
+p {
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: justify;
 }
 
 .decoracion-al-final {
@@ -17,171 +18,169 @@ p{
     padding-bottom: -22px;
 }
 
-.container, .book-content{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.container, .book-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.container{
-	width: 100%;
-	height: 100vh;
 
-	background-repeat: no-repeat;
-	background-size:cover;
+.book-content {
+    width: 65%;
+    min-width: 250px;
+    max-width: 400px;
+    height: 330px;
+    position: relative;
+    perspective: 1000px;
+    transition: 1s;
 }
-.book-content{
-	width: 65%;
-	min-width: 250px;
-	max-width: 400px;
-	height: 330px;
-	position: relative;
-	perspective: 1000px;
-	transition: 1s;
+
+.book {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+    transform-origin: left;
 }
-.book{
-	position: absolute;
-	width: 65%;
-	height: 100%;
-	transition: 1s;
-	transform-style: preserve-3d;
-	transform-origin: left; 
+
+.face-front, .face-back {
+    width: 100%;
+    height: 100%;
+    background: #E1E1D0;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
-.face-front, .face-back{
-	width: 100%;
-	height: 100%;
-	background: #E1E1D0;
-	padding: 15px;
-	box-sizing: border-box;
-	overflow: hidden;
+
+.face-front {
+    box-shadow: inset 3px 0px 10px -7px black;
 }
-.face-front{
-	box-shadow: inset 3px 0px 10px -7px black;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-.face-back{
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translateZ(-1px) rotateY(180deg);
-	box-shadow: inset -3px 1px 10px -7px black;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
+
+.face-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateZ(-1px) rotateY(180deg);
+    box-shadow: inset -3px 1px 10px -7px black;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 .face-back p {
-	font-size: 10px;
-	padding: 3px;
-	font-style: italic; /* Texto en cursiva */
-	text-align: center;
-	margin-bottom: 40px;
-	margin-top: 5px; /* Ajusta el margen superior según sea necesario */
+    font-size: 10px;
+    padding: 3px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 5px;
 }
 
-#portada{
-	background: url('../img/porta.jpeg');
-}
-#portada-back{
-	background: url('../img/portadaBack.jpg');
-}
-#portada, #portada-back{
-	background-size: 100% 100%;
+#portada {
+    background: url('../img/porta.jpeg');
 }
 
-/* Clases que se agregaran con Javascript */
-
-.trnsf{
-	transform: translateX(80px);
-}
-.trnsf-reset{
-	transform: translateX(0px);
+#portada-back {
+    background: url('../img/portadaBack.jpg');
 }
 
-/* @media para hacer el texto responsivo */
-
-@media screen and (max-width: 800px){
-	p{
-		font-size: 12px;
-	}
+#portada, #portada-back {
+    background-size: 100% 100%;
 }
 
 .rectangulo {
-	width: 100%; /* Ancho del rectángulo */
-	height: 100%; /* Altura del rectángulo */
-	border: 1px solid #874421; /* Grosor y color del borde */
-	border-radius: 10px; /* Radio de las esquinas (opcional) */
-	display: flex;
-	flex-direction: column; /* Alinea el contenido en columna */
-	justify-content: space-between; /* Espacia el contenido de forma uniforme */
-	font-size: 10px; /* Tamaño de fuente general */
+    width: 100%;
+    height: 100%;
+    border: 1px solid #874421;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
 }
 
 .rectangulo p {
-	font-size: 10px;
-	padding: 3px;
-	text-align: center;
-	margin-bottom: 100px;
-	font-style: italic; /* Texto en cursiva */
-	margin-top: -65px; /* Ajusta el margen superior según sea necesario */
-  }
-  
+    font-size: 10px;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 100px;
+    font-style: italic;
+    margin-top: -65px;
+}
 
-.tit{
-color: #D3FDA1;
--webkit-text-stroke: 1px black;
+.tit {
+    color: #D3FDA1;
+    -webkit-text-stroke: 1px black;
 }
 
 .rectangulo .saludo-inicial {
-font-size: 10px; /* Tamaño de fuente para "Hola Raquel" */
-font-weight: bold; /* Texto en negrita */
-font-style: italic; /* Texto en cursiva */
-padding-left: 10px;
-padding-top: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .rectangulo .saludo-final {
-text-align: right; /* Alineación a la derecha para "Saludos cordiales, Jeffrey" */
-font-style: italic; /* Texto en cursiva */
-font-weight: bold; /* Texto en negrita */
-padding-right: 10px;
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+    padding-right: 10px;
 }
 
 .img-cafe {
-	width: 80px;
-	height: 80px;
-	margin-left: 80px;
-	margin-top: -100px;
-	display: block;
-  }
+    width: 80px;
+    height: 80px;
+    margin-left: 80px;
+    margin-top: -100px;
+    display: block;
+}
 
-  .img-estre {
-	width: 60px;
-	height: 60px;
-	margin-left: 80px;
-	display: block;
-  }
+.img-estre {
+    width: 60px;
+    height: 60px;
+    margin-left: 80px;
+    display: block;
+}
 
 .decoracion-parrafo {
-    border-top: 1px solid #874421; /* Línea superior */
-	padding-bottom: -60px;
-    margin: 0 0; /* Margen alrededor del contenedor */
+    border-top: 1px solid #874421;
+    padding-bottom: -60px;
+    margin: 0 0;
 }
+
 .decoracion-parrafo p {
-    margin: 0; /* Elimina el margen del párrafo dentro del contenedor */
+    margin: 0;
 }
 
 .contenedorr {
-	position: relative;
-	padding: -20px;
-  }
-  
+    position: relative;
+    padding: -20px;
+}
+
 .contenedorr::before {
-	content: '';
-	position: absolute;
-	bottom: -15px;
-	left: 0;
-	border-width: 5px; /* Tamaño de la flecha */
-	border-style: solid;
-	border-color: #874421 transparent transparent transparent; /* Color de la flecha */
-  }
-  
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #874421 transparent transparent transparent;
+}
+
+/* Media queries para hacer el diseño responsive */
+
+@media screen and (max-width: 800px) {
+    p {
+        font-size: 12px;
+    }
+    .rectangulo p {
+        font-size: 80%;
+        margin-bottom: 20px;
+    }
+}
