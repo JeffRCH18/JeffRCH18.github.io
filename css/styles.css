@@ -176,6 +176,33 @@ p {
 /* Media queries para hacer el diseño responsive */
 
 @media screen and (max-width: 800px) {
+
+    
+        .ssaludo {
+            padding: 20px;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            width: fit-content;
+            border: none;
+            margin-left: -500px;
+        
+        }
+    
+        body {
+            background-image: url('../img/porta.jpeg');
+            background-attachment: fixed; /* Fija el fondo */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+    
+        /* Resto de tus estilos para móviles */
+    
+        .saludo-container {
+            text-align: center; /* Centra el saludo */
+            padding: 20px; /* Ajusta el espaciado según sea necesario */
+        }
     p {
         font-size: 12px;
     }
@@ -195,6 +222,7 @@ p {
         padding: 10px;
     }
 }
+
 
 .ssaludo {
     color: aliceblue;
