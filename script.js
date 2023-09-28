@@ -46,3 +46,19 @@ for (var i = 0; i < uno.length; i++) {
 
 	});
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const currentHour = new Date().getHours();
+
+    // Cambia el fondo según la hora
+    if (currentHour >= 7 && currentHour < 18) {
+        // Es de día, establece la imagen de fondo para el día
+        body.style.backgroundImage = 'url("img/d5.jpg")';
+    } else {
+        // Es de noche, establece la imagen de fondo para la noche
+        body.style.backgroundImage = 'url("img/d6.jpg")';
+    }
+	body.style.backgroundRepeat = 'no-repeat';
+    body.style.backgroundSize = 'cover';
+});
