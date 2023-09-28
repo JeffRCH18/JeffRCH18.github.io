@@ -176,7 +176,7 @@ p {
 /* Media queries para hacer el diseño responsive */
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
 
     
     .ssaludo {
@@ -186,7 +186,7 @@ p {
         text-align: center;
         width: fit-content;
         border: none;
-        margin-left: -500px;
+        margin-left: -450px;
     
     }
 
