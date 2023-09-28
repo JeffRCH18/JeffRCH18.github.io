@@ -175,56 +175,85 @@ p {
 
 /* Media queries para hacer el diseño responsive */
 
+
 @media screen and (max-width: 800px) {
 
     
-        .ssaludo {
-            padding: 20px;
-            display: block;
-            margin: 0 auto;
-            text-align: center;
-            width: fit-content;
-            border: none;
-            margin-left: -500px;
-        
-        }
+    .ssaludo {
+        padding: 20px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: fit-content;
+        border: none;
+        margin-left: -500px;
     
-        body {
-            background-image: url('../img/porta.jpeg');
-            background-attachment: fixed; /* Fija el fondo */
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    
-    
-        /* Resto de tus estilos para móviles */
-    
-        .saludo-container {
-            text-align: center; /* Centra el saludo */
-            padding: 20px; /* Ajusta el espaciado según sea necesario */
-        }
+    }
+
+    body {
+        background-image: url('../img/porta.jpeg');
+        background-attachment: fixed; 
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .saludo-container {
+        text-align: center;
+        padding: 20px; 
+    }
     p {
         font-size: 12px;
-    }
+    }   
 
+    .rectangulo {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #874421;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 10px;
+    }
+    
     .rectangulo p {
-        font-size: 80%;
-        margin-bottom: 20px;
+        font-size: 8px;
+        padding: 3px;
+        text-align: center;
+        margin-bottom: 100px;
+        font-style: italic;
+        margin-top: -85px;
     }
 
-    .img-cafe, .img-estre {
-        width: 50%;
-        margin-left: 20px;
-        margin-top: -80px;
+    .img-cafe {
+        width: 80px;
+        height: 80px;
+        margin-left: 50px;
+        margin-top: -100px;
+        display: block;
     }
 
     .face-front, .face-back {
-        padding: 10px;
+        width: 100%;
+        height: 100%;
+        background: #E1E1D7;
+        padding: 15px;
+        font-size: 9px;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
     }
-}
 
+    .decoracion-al-final {
+        margin-top: 10px;
+        font-size: 9px;
+        text-align: justify;
+        border-bottom: 1px solid #874421; /* Línea inferior */
+        padding-bottom: -22px;
+    }
 
-.ssaludo {
+    .ssaludo {
     color: aliceblue;
     display: block;
     font-size: 28px;
@@ -239,7 +268,7 @@ p {
     animation: typing 2s steps(12), blink .5s infinite step-end alternate;
     overflow: hidden;
 }
-
+}
 @keyframes typing {
     from { width: 0; border-color: transparent; } /* Hacer el cursor transparente */
 }
