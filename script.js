@@ -62,3 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	body.style.backgroundRepeat = 'no-repeat';
     body.style.backgroundSize = 'cover';
 });
+
+
+const saludoDiv = document.getElementById('saludo');
+
+function obtenerSaludo() {
+  const horaActual = new Date().getHours();
+
+  if (horaActual >= 5 && horaActual < 18) {
+    return 'Buenos días!!';
+  } else {
+    return 'Buenas noches';
+  }
+}
+
+const saludo = obtenerSaludo();
+saludoDiv.innerHTML = `<a href="#" class="ssaludo">${saludo}</a>`;
