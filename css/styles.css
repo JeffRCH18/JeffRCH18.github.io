@@ -4,6 +4,14 @@
     font-family: sans-serif;
 }
 
+.despedida{
+    color: aliceblue;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10%;
+}
+
 p {
     margin-top: 10px;
     font-size: 13px;
